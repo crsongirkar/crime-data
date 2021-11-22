@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+<script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
+  <style>
+    .chart--container {
+      min-height: 530px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myChart" class="chart--container">
+  <!----  <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a> !-->
+  </div>
+  <script>
+  //  ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    let chartConfig = {
+      shapes: [{
+          type: 'zingchart.maps',
+          options: {
+            bbox: [67.177, 36.494, 98.403, 6.965], // get bbox from zingchart.maps.getItemInfo('world-countries','ind');
+            ignore: ['IND'], // ignore India because we are rendering a more specific India map below
+            name: 'india',
+            panning: true, // turn of zooming. Doesn't work with bounding box
+            style: {
+              tooltip: {
+                borderColor: '#000',
+                borderWidth: '2px',
+                fontSize: '18px'
+              },
+              controls: {
+                visible: true// turn of zooming. Doesn't work with bounding box
+              },
+              hoverState: {
+                alpha: .28
+              }
+            },
+            zooming: true // turn of zooming. Doesn't work with bounding box
+          }
+        },
+        {
+          type: 'zingchart.maps',
+          options: {
+            name: 'ind',
+            panning: true, // turn of zooming. Doesn't work with bounding box
+            zooming: true,
+            scrolling: true,
+            style: {
+              tooltip: {
+                borderColor: '#000',
+                borderWidth: '2px',
+                fontSize: '18px'
+              },
+              borderColor: '#000',
+              borderWidth: '2px',
+              controls: {
+                visible: true, // turn of zooming. Doesn't work with bounding box
+
+              },
+              hoverState: {
+                alpha: .28
+              },
+              items: {
+                KA: {
+                  tooltip: {
+                    text: 'Karnataka',  // mention the crime area here
+                    backgroundColor: '#ff5722'
+                  },
+                  backgroundColor: '#ff5722',
+                  label: {
+                    visible: true
+                  }
+                },
+                MH: {
+                  tooltip: {
+                    text: 'Maharashtra',
+                    backgroundColor: '#ff9800'
+                  },
+                  backgroundColor: '#ff9800',
+                  label: {
+                    visible: true
+                  }
+                },
+                TL: {
+                  tooltip: {
+                    text: 'Telangana',
+                    backgroundColor: '#00AE4D'
+                  },
+                  backgroundColor: '#00AE4D',
+                  label: {
+                    visible: true
+                  }
+                },
+                TN: {
+                  tooltip: {
+                    text: 'Tamil Nadu',
+                    backgroundColor: '#00bcd4'
+                  },
+                  backgroundColor: '#00bcd4',
+                  label: {
+                    visible: true
+                  }
+                },
+                
+                AP: {
+                  tooltip: {
+                    text: 'Andhra Pradesh',
+                    backgroundColor: 'blue'
+                  },
+                  backgroundColor: 'blue',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                 AR: {
+                  tooltip: {
+                    text: 'Arunachal Pradesh',
+                    backgroundColor: 'C0C0C0'
+                  },
+                  backgroundColor: 'white',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+
+                AR: {
+                  tooltip: {
+                    text: 'Arunachal Pradesh',
+                    backgroundColor: 'C0C0C0'
+                  },
+                  backgroundColor: 'white',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                AS: {
+                  tooltip: {
+                    text: 'Assam',
+                    backgroundColor: 'gray'
+                  },
+                  backgroundColor: 'gray',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                BR: {
+                  tooltip: {
+                    text: 'Bihar',
+                    backgroundColor: 'orange'
+                  },
+                  backgroundColor: 'orange',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                MP:{
+                  tooltip: {
+                    text: 'Madhya Pradesh',
+                    backgroundColor: 'red'
+                  },
+                  backgroundColor: 'red ',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                
+                HR: {
+                  tooltip: {
+                    text: 'Haryana',
+                    backgroundColor: 'green'
+                  },
+                  backgroundColor: 'green',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                GJ: {
+                  tooltip: {
+                    text: 'Gujrat',
+                    backgroundColor: '#00bcd4'
+                  },
+                  backgroundColor: '#00bcd4',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                GA: {
+                  tooltip: {
+                    text: 'Goa',
+                    backgroundColor: 'white'
+                  },
+                  backgroundColor: 'black',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                 RJ:{
+                  tooltip: {
+                    text: 'Rajasthan',
+                    backgroundColor: 'yellow'
+                  },
+                  backgroundColor: 'yellow',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                HP: {
+                  tooltip: {
+                    text: 'Himachal Pradeshh',
+                    backgroundColor: '#00AE4D'
+                  },
+                  backgroundColor: '#00AE4D',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                KL: {
+                  tooltip: {
+                    text: 'Kerala',
+                    backgroundColor: 'Yellow'
+                  },
+                  backgroundColor: 'Yellow',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                JK: {
+                  tooltip: {
+                    text: 'Jammu and Kashmir',
+                    backgroundColor: 'red'
+                  },
+                  backgroundColor: 'red',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                 SK : {
+                  tooltip: {
+                    text: 'Sikkim',
+                    backgroundColor: 'Yellow'
+                  },
+                  backgroundColor: 'Yellow',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                TR: {
+                  tooltip: {
+                    text: 'Tripura',
+                    backgroundColor: 'Pink'
+                  },
+                  backgroundColor: 'Pink',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                UP: {
+                  tooltip: {
+                    text: 'Uttar Pradesh',
+                    backgroundColor: 'Lime'
+                  },
+                  backgroundColor: 'Lime',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                WB: {
+                  tooltip: {
+                    text: 'West Bengal',
+                    backgroundColor: 'Yellow'
+                  },
+                  backgroundColor: 'Yellow',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                PB: {
+                  tooltip: {
+                    text: 'Punjab',
+                    backgroundColor: 'Yellow'
+                  },
+                  backgroundColor: 'Yellow',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+               ML: {
+                  tooltip: {
+                    text: 'Meghalaya',
+                    backgroundColor: 'Brown'
+                  },
+                  backgroundColor: 'Brown',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                MN: {
+                  tooltip: {
+                    text: 'Manipur',
+                    backgroundColor: 'Aquamarine'
+                  },
+                  backgroundColor: 'Aquamarine',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                NL: {
+                  tooltip: {
+                    text: 'Nagaland',
+                    backgroundColor: 'Aquamarine'
+                  },
+                  backgroundColor: 'Aquamarine',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                JH: {
+                  tooltip: {
+                    text: 'Jharkhand',
+                    backgroundColor: 'Brown'
+                  },
+                  backgroundColor: 'Brown',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                MZ: {
+                  tooltip: {
+                    text: 'Mizoram',
+                    backgroundColor: 'Brown'
+                  },
+                  backgroundColor: 'Brown',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                OR: {
+                  tooltip: {
+                    text: 'orissa',
+                    backgroundColor: 'Brown'
+                  },
+                  backgroundColor: 'Brown',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                CT: {
+                  tooltip: {
+                    text: 'Chhattisgarh',
+                    backgroundColor: 'Aquamarine'
+                  },
+                  backgroundColor: 'Aquamarine',
+                  label: {
+                    visible: true
+                  } 
+                } ,
+                
+
+
+              
+              
+              
+              
+               },
+
+              
+               label: { // text displaying. Like valueBox
+                fontSize: '15px',
+                visible: false
+              }
+            },
+            zooming: true // turn of zooming. Doesn't work with bounding box
+          }
+        }
+      ]
+    }
+   
+  
+    zingchart.loadModules('maps,maps-ind,maps-world-countries');
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      height: '100%',
+      width: '100%',
+    });
+  </script>
+</body>
+
+</html>
